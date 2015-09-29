@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<style>
+#horizontal-scroll {
+position: relative;
+width: auto;
+height: 460px;
+background: url(backg.jpg) repeat-y;
+-webkit-animation: backgroundScroll 8s linear infinite;
+animation: backgroundScroll 8s linear infinite;
+}
+
+#plane
+{
+position: relative;
+top: 180px;
+left: 400px;
+}
+
+#flyup div{}
+#flyup div:target {
+transform:translateY(100px);
+ }
+#flydown div{}
+#flydown div:target {
+transform:translateY(-100px);
+ }
+
+ 
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -1638px 0;}
+}
+ 
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -1638px 0;}
+}
+</style>
+</head>
+<body>
+<div id="horizontal-scroll">
+ <div id="plane"><div id="flyup"><div id="flydown"><div id="up"><img src="plane.png" width="20%" height="20%"></div></div></div></div>
+</div>
+
+<div align="center">
+<a href="#up"> <img src="up.png"> </a>
+<a href="#down"> <img src="down.png"> </a>
+</div>
+
+</body>
